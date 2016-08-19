@@ -1,0 +1,134 @@
+#Grid1ContainerDiv #Grid1ContainerTbl tr.GridClearOdd {
+	background-color: #F3F3F3;
+}
+#Grid1ContainerDiv #Grid1ContainerTbl tr.GridClearOdd > td {
+	padding: 8px 4px;
+}
+
+#Grid1ContainerDiv #Grid1ContainerTbl tr.GridClearOdd span.ns-label{
+	margin-right: 4px;
+}
+
+#Grid1ContainerDiv #Grid1ContainerTbl td, #Grid1ContainerDiv #Grid1ContainerTbl th {
+	font-family: Helvetica;
+}
+
+#Grid1ContainerDiv #Grid1ContainerTbl th.GridClearTitle {
+    font-weight: 100;
+}
+
+/* Bootstrap Badges & Labels */
+
+.ns-label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+a.ns-label:hover,
+a.ns-label:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ns-label:empty {
+  display: none;
+}
+.btn .ns-label {
+  position: relative;
+  top: -1px;
+}
+.ns-label-default {
+  background-color: #777;
+}
+.ns-label-default[href]:hover,
+.ns-label-default[href]:focus {
+  background-color: #5e5e5e;
+}
+.ns-label-primary {
+  background-color: #337ab7;
+}
+.ns-label-primary[href]:hover,
+.ns-label-primary[href]:focus {
+  background-color: #286090;
+}
+.ns-label-success {
+  background-color: #5cb85c;
+}
+.ns-label-success[href]:hover,
+.ns-label-success[href]:focus {
+  background-color: #449d44;
+}
+.ns-label-info {
+  background-color: #5bc0de;
+}
+.ns-label-info[href]:hover,
+.ns-label-info[href]:focus {
+  background-color: #31b0d5;
+}
+.ns-label-warning {
+  background-color: #f0ad4e;
+}
+.ns-label-warning[href]:hover,
+.ns-label-warning[href]:focus {
+  background-color: #ec971f;
+}
+.ns-label-danger {
+  background-color: #d9534f;
+}
+.ns-label-danger[href]:hover,
+.ns-label-danger[href]:focus {
+  background-color: #c9302c;
+}
+.ns-badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #777;
+  border-radius: 10px;
+}
+.ns-badge:empty {
+  display: none;
+}
+.btn .ns-badge {
+  position: relative;
+  top: -1px;
+}
+.btn-xs .ns-badge,
+.btn-group-xs > .btn .ns-badge {
+  top: 0;
+  padding: 1px 5px;
+}
+a.ns-badge:hover,
+a.ns-badge:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.list-group-item.active > .ns-badge,
+.nav-pills > .active > a > .ns-badge {
+  color: #337ab7;
+  background-color: #fff;
+}
+.list-group-item > .ns-badge {
+  float: right;
+}
+.list-group-item > .ns-badge + .ns-badge {
+  margin-right: 5px;
+}
+.nav-pills > li > a > .ns-badge {
+  margin-left: 3px;
+}
