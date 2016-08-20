@@ -1,11 +1,29 @@
 #Grid1ContainerDiv #Grid1ContainerTbl tr.GridClearOdd {
-	background-color: #F3F3F3;
+  background-color: #F3F3F3;
+  cursor: pointer;
+}
+#Grid1ContainerDiv #Grid1ContainerTbl tr.GridClearOdd:hover {
+  background-color: #F0F0F0;
+}
+tr[class^='GridClear'].ns-active {
+  background-color: #E3E3E3 !important;
+}
+#TABLE3 tr[class^='GridClear'] {
+  white-space: nowrap;
+  font-family: Helvetica;
+  font-size: 11.5pt;
+  background-color: White;
+  text-align: left;
+  text-indent: 5px;
+}
+#TABLE3 tr[class^='GridClear']:nth-child(even) {
+  background-color: WhiteSmoke;
 }
 #Grid1ContainerDiv #Grid1ContainerTbl tr.GridClearOdd > td {
 	padding: 8px 4px;
 }
 
-#Grid1ContainerDiv #Grid1ContainerTbl tr.GridClearOdd span.ns-label{
+#Grid1ContainerDiv #Grid1ContainerTbl tr.GridClearOdd span.ns-label {
 	margin-right: 4px;
 }
 

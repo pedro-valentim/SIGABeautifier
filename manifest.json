@@ -18,7 +18,8 @@
     {
       "matches": ["https://www.sigacentropaulasouza.com.br/aluno/horario.aspx"],
       "css": [
-        "css/new_siga.css"
+        "css/new_siga.css",
+        "css/new_siga_print.css"
       ],
       "js": [
         "js/jquery.js",

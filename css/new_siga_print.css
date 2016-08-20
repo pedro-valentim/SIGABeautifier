@@ -1,0 +1,6 @@
+@media print {
+  * {
+    -webkit-print-color-adjust:exact;
+    transition:none!important
+  }
+}
