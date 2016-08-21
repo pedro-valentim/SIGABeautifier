@@ -1,6 +1,15 @@
+.only-print {
+	display: none;
+}
 @media print {
   * {
     -webkit-print-color-adjust:exact;
     transition:none!important
+  }
+  .no-print {
+  	display: none!important;
+  }
+  .only-print {
+  	display: block!important;
   }
 }

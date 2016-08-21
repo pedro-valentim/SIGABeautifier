@@ -1,5 +1,14 @@
 $(function(){
 
+	var print_btn = $("<button class='ns-btn-print ns-btn ns-btn-primary ns-pull-right no-print' onclick='javascript:print();' />");
+	print_btn.text('Imprimir horários');
+
+	print_btn.insertBefore( "#TABLE100_MPAGE" );
+
+	$("#TABELAINTERNA_MPAGE td:eq(0)").addClass('no-print');
+
+	$('#TEXTBLOCK11 > input').remove();
+
 	$('#Grid1ContainerDiv #Grid1ContainerTbl tr[class^=GridClear]').each(function(i, el){
 		var disciplina = $('td:eq(1)', $(this));
 		var parts = disciplina.text().split('<br>');
@@ -10,6 +19,11 @@ $(function(){
 
 	$('#TABLE3 table.GridClear').each(function(i, horario_dia) {
 		var horario_aulas = [];
+
+		$('tr:eq(0):not([class^=GridClear])', horario_dia).each(function(){
+			$('th.GridClearTitle:eq(0)', this).remove();
+		});
+
 		$('tr[class^=GridClear]', horario_dia).each(function(i, horario_aula){
 			var horario = $('td:eq(1)', horario_aula).text();
 			var sigla = $('td:eq(2)', horario_aula).text();
@@ -38,7 +52,7 @@ $(function(){
 
 		// Readiciona horários do dia
 		$.each(horario_aulas, function(i, horario) {
-			var tr = $('<tr />').addClass('GridClear').html($('<td />'));
+			var tr = $('<tr />').addClass('GridClear');
 			tr.append($('<td />').text(horario.horario));
 			tr.append($('<td />').addClass('ns-horario').text(horario.sigla));
 			tr.append($('<td />').text(horario.turma));
