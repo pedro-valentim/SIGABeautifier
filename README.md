@@ -2,7 +2,7 @@
 SIGA Beautifier é uma extensão do Chrome para melhorar a visualização do [SIGA - Centro Paula Souza](https://www.sigacentropaulasouza.com.br/aluno)
 ## Passo a passo para instalação da extensão
 
-- Faça download do .crx [aqui](https://drive.google.com/file/d/0B3emPHm8bjuDTk9uN3VRWW5iZzg/view?usp=sharing));
+- Faça download do .crx [aqui](https://drive.google.com/open?id=0B3emPHm8bjuDcmpJUi1NY01kYnc));
 - Entre em chrome://extensions/ (Menu > Mais ferramentas > Extensões);
 - Arraste o arquivo para a tela e clique em Adicionar.
 
