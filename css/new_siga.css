@@ -6,8 +6,14 @@
   background-color: #F0F0F0;
 }
 tr[class^='GridClear'].ns-active {
-  background-color: #E3E3E3 !important;
+  background-color: #5a8bb5 !important;
+  color: #ffffff!important;
 }
+
+tr[class^='GridClear'].ns-active>td>span.ReadonlyAttribute {
+  color: #ffffff!important;
+}
+
 th.GridClearTitle {
   font-family: Helvetica;
   font-weight: 100;
@@ -27,15 +33,15 @@ th.GridClearTitle {
   padding-bottom: 4px;
 }
 #Grid1ContainerDiv #Grid1ContainerTbl tr.GridClearOdd > td {
-	padding: 8px 4px;
+  padding: 8px 4px;
 }
 
 #Grid1ContainerDiv #Grid1ContainerTbl tr.GridClearOdd span.ns-label {
-	margin-right: 4px;
+  margin-right: 4px;
 }
 
 #Grid1ContainerDiv #Grid1ContainerTbl td, #Grid1ContainerDiv #Grid1ContainerTbl th {
-	font-family: Helvetica;
+  font-family: Helvetica;
 }
 
 .ns-btn-print {
