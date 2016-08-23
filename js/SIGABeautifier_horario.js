@@ -1,6 +1,6 @@
 $(function(){
 
-	var print_btn = $("<button class='ns-btn-print ns-btn ns-btn-primary ns-pull-right no-print' onclick='javascript:print();' />");
+	var print_btn = $("<button class='sigabeautifier-btn-print sigabeautifier-btn sigabeautifier-btn-primary sigabeautifier-pull-right no-print' onclick='javascript:print();' />");
 	print_btn.text('Imprimir horários');
 
 	print_btn.insertBefore( "#TABLE100_MPAGE" );
@@ -15,7 +15,7 @@ $(function(){
 	$('#Grid1ContainerDiv #Grid1ContainerTbl tr[class^=GridClear]').each(function(i, el){
 		var disciplina = $('td:eq(1)', $(this));
 		var parts = disciplina.text().split('<br>');
-		var horas_aula_label = $('<span />').addClass('ns-label ns-label-primary').text(parts[1]);
+		var horas_aula_label = $('<span />').addClass('sigabeautifier-label sigabeautifier-label-primary').text(parts[1]);
 		disciplina.html(horas_aula_label);
 		disciplina.append(parts[0]);
 	});
@@ -57,7 +57,7 @@ $(function(){
 		$.each(horario_aulas, function(i, horario) {
 			var tr = $('<tr />').addClass('GridClear');
 			tr.append($('<td />').text(horario.horario));
-			tr.append($('<td />').addClass('ns-horario').text(horario.sigla));
+			tr.append($('<td />').addClass('sigabeautifier-horario').text(horario.sigla));
 			tr.append($('<td />').text(horario.turma));
 			$(horario_dia).append(tr);
 		});
@@ -67,25 +67,25 @@ $(function(){
 	$('#Grid1ContainerDiv #Grid1ContainerTbl tr[class^=GridClear]').click(function(){
 
 		// Remove classe que destaca linhas da tabela de matérias
-		$('#Grid1ContainerDiv #Grid1ContainerTbl tr[class^=GridClear]').removeClass('ns-active');
+		$('#Grid1ContainerDiv #Grid1ContainerTbl tr[class^=GridClear]').removeClass('sigabeautifier-active');
 
 		// Remove classe que inverte cor de fundo do label
-		$('#Grid1ContainerDiv #Grid1ContainerTbl span.ns-label').removeClass('ns-label-reverse');
+		$('#Grid1ContainerDiv #Grid1ContainerTbl span.sigabeautifier-label').removeClass('sigabeautifier-label-reverse');
 
 		// Adiciona classe que inverte cor de fundo do label da linha selecionada
-		$('span.ns-label', $(this)).addClass('ns-label-reverse');
+		$('span.sigabeautifier-label', $(this)).addClass('sigabeautifier-label-reverse');
 		
 		// Adiciona classe que destaca linha selecionada
-		$(this).addClass('ns-active');
+		$(this).addClass('sigabeautifier-active');
 
 		var sigla = $('td:eq(0)', $(this)).text();
 
 		// Remove classe que destaca linhas das tabelas de horário
-		$('#TABLE3 tr.GridClear').removeClass('ns-active');
+		$('#TABLE3 tr.GridClear').removeClass('sigabeautifier-active');
 
-		$('#TABLE3 tr.GridClear .ns-horario').each(function(i, element) {
+		$('#TABLE3 tr.GridClear .sigabeautifier-horario').each(function(i, element) {
 			// Destaca linhas das tabelas de horário que forem da mesma disciplina clicada
-			if ($(element).text() == sigla) $(element).parents('tr.GridClear').addClass('ns-active');
+			if ($(element).text() == sigla) $(element).parents('tr.GridClear').addClass('sigabeautifier-active');
 		});
 
 	});

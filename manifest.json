@@ -23,7 +23,8 @@
     {
       "matches": ["https://www.sigacentropaulasouza.com.br/aluno/*"],
       "css": [
-        "css/SIGABeautifier.css"
+        "css/SIGABeautifier.css",
+        "css/SIGABeautifier_bootstrap.css"
       ],
       "js": [
         "js/jquery.js",
