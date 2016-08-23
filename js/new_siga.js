@@ -5,6 +5,9 @@ $(function(){
 
 	print_btn.insertBefore( "#TABLE100_MPAGE" );
 
+	// send message to background script
+    chrome.runtime.sendMessage({ "newIconPath" : '../icon-active.png' });
+
 	$("#TABELAINTERNA_MPAGE td:eq(0)").addClass('no-print');
 
 	$('#TEXTBLOCK11 > input').remove();
