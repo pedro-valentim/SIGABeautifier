@@ -89,6 +89,14 @@ a.ns-label:focus {
 .ns-label-primary[href]:focus {
   background-color: #286090;
 }
+.ns-label-reverse {
+  background-color: white;
+  color: #5A8BB5;
+}
+.ns-label-reverse[href]:hover,
+.ns-label-reverse[href]:focus {
+  background-color: #3B81BE;
+}
 .ns-label-success {
   background-color: #5cb85c;
 }

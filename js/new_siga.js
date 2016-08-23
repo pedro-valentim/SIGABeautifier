@@ -63,10 +63,16 @@ $(function(){
 
 	$('#Grid1ContainerDiv #Grid1ContainerTbl tr[class^=GridClear]').click(function(){
 
-
-
+		// Remove classe que destaca linhas da tabela de matérias
 		$('#Grid1ContainerDiv #Grid1ContainerTbl tr[class^=GridClear]').removeClass('ns-active');
+
+		// Remove classe que inverte cor de fundo do label
+		$('#Grid1ContainerDiv #Grid1ContainerTbl span.ns-label').removeClass('ns-label-reverse');
+
+		// Adiciona classe que inverte cor de fundo do label da linha selecionada
+		$('span.ns-label', $(this)).addClass('ns-label-reverse');
 		
+		// Adiciona classe que destaca linha selecionada
 		$(this).addClass('ns-active');
 
 		var sigla = $('td:eq(0)', $(this)).text();
