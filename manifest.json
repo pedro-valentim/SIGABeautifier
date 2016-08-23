@@ -7,7 +7,7 @@
 
   "browser_action": {
     "default_icon": "icon.png",
-    "default_title": "Beautify SIGA!"
+    "default_title": "SIGABeautifier!"
   },
   "permissions": [
     "activeTab",
@@ -21,14 +21,23 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/horario.aspx"],
+      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/*"],
       "css": [
-        "css/new_siga.css",
-        "css/new_siga_print.css"
+        "css/SIGABeautifier.css"
       ],
       "js": [
         "js/jquery.js",
-        "js/new_siga.js"
+        "js/SIGABeautifier.js"
+      ]
+    },
+    {
+      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/horario.aspx"],
+      "css": [
+        "css/SIGABeautifier_horario.css",
+        "css/SIGABeautifier_horario_print.css"
+      ],
+      "js": [
+        "js/SIGABeautifier_horario.js"
       ]
     }
   ]
