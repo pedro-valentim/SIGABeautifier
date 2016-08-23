@@ -7,9 +7,9 @@ SIGA Beautifier é uma extensão do Chrome para melhorar a visualização do [SI
 3. Arraste o arquivo para a tela e clique em Adicionar.
 4. Pronto!
 
-## Exemplo da tela
+## Tela
 
-![alt text](https://github.com/pedro-valentim/SIGABeautifier/blob/master/example/exemplo-horario.png "GRADE HORÁRIA DO CURSO")
+![Tela de Horário](https://github.com/pedro-valentim/SIGABeautifier/blob/master/example/example-horario.png "GRADE HORÁRIA DO CURSO")
 
 ## Features
 - [GRADE HORÁRIA DO CURSO (/aluno/horario.aspx)](https://www.sigacentropaulasouza.com.br/aluno/horario.aspx)
