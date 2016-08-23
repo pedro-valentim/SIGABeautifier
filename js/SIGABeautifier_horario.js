@@ -1,9 +1,10 @@
 $(function(){
 
-	var print_btn = $("<button class='sigabeautifier-btn-print sigabeautifier-btn sigabeautifier-btn-primary sigabeautifier-pull-right no-print' onclick='javascript:print();' />");
-	print_btn.text('Imprimir horários');
-
-	print_btn.insertBefore( "#TABLE100_MPAGE" );
+	// Adiciona botão de impressão
+	$("<button onclick='javascript:print();' />")
+		.text('Imprimir horários')
+		.addClass('sigabeautifier-btn-print sigabeautifier-btn sigabeautifier-btn-primary sigabeautifier-pull-right no-print')
+		.insertBefore( "#TABLE100_MPAGE" );
 
 	// send message to background script
     chrome.runtime.sendMessage({ "newIconPath" : '../icon-active.png' });
@@ -66,27 +67,34 @@ $(function(){
 
 	$('#Grid1ContainerDiv #Grid1ContainerTbl tr[class^=GridClear]').click(function(){
 
+		var not_reselecting = $(this).hasClass('sigabeautifier-active') == false;
+
 		// Remove classe que destaca linhas da tabela de matérias
-		$('#Grid1ContainerDiv #Grid1ContainerTbl tr[class^=GridClear]').removeClass('sigabeautifier-active');
+		$('#Grid1ContainerDiv #Grid1ContainerTbl tr.sigabeautifier-active').removeClass('sigabeautifier-active');
 
 		// Remove classe que inverte cor de fundo do label
-		$('#Grid1ContainerDiv #Grid1ContainerTbl span.sigabeautifier-label').removeClass('sigabeautifier-label-reverse');
-
-		// Adiciona classe que inverte cor de fundo do label da linha selecionada
-		$('span.sigabeautifier-label', $(this)).addClass('sigabeautifier-label-reverse');
-		
-		// Adiciona classe que destaca linha selecionada
-		$(this).addClass('sigabeautifier-active');
-
-		var sigla = $('td:eq(0)', $(this)).text();
+		$('#Grid1ContainerDiv #Grid1ContainerTbl span.sigabeautifier-label-reverse').removeClass('sigabeautifier-label-reverse');
 
 		// Remove classe que destaca linhas das tabelas de horário
 		$('#TABLE3 tr.GridClear').removeClass('sigabeautifier-active');
 
-		$('#TABLE3 tr.GridClear .sigabeautifier-horario').each(function(i, element) {
-			// Destaca linhas das tabelas de horário que forem da mesma disciplina clicada
-			if ($(element).text() == sigla) $(element).parents('tr.GridClear').addClass('sigabeautifier-active');
-		});
+		// Se o item já não estava selecionado
+		if (not_reselecting) {
+
+			// Adiciona classe que inverte cor de fundo do label da linha selecionada
+			$('span.sigabeautifier-label', $(this)).addClass('sigabeautifier-label-reverse');
+			
+			// Adiciona classe que destaca linha selecionada
+			$(this).addClass('sigabeautifier-active');
+
+			var sigla = $('td:eq(0)', $(this)).text();
+
+			$('#TABLE3 tr.GridClear .sigabeautifier-horario').each(function(i, element) {
+				// Destaca linhas das tabelas de horário que forem da mesma disciplina clicada
+				if ($(element).text() == sigla) $(element).parents('tr.GridClear').addClass('sigabeautifier-active');
+			});
+
+		}
 
 	});
 
