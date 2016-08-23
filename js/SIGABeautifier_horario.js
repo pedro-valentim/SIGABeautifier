@@ -4,7 +4,8 @@ $(function(){
 	$("<button onclick='javascript:print();' />")
 		.text('Imprimir horários')
 		.addClass('sigabeautifier-btn-print sigabeautifier-btn sigabeautifier-btn-primary sigabeautifier-pull-right no-print')
-		.insertBefore( "#TABLE100_MPAGE" );
+		.addClass('sigabeautifier-absolute-right')
+		.insertBefore( "#TABLE2" );
 
 	// send message to background script
     chrome.runtime.sendMessage({ "newIconPath" : '../icon-active.png' });

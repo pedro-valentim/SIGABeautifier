@@ -584,6 +584,10 @@ input[type="reset"].sigabeautifier-btn-block,
 input[type="button"].sigabeautifier-btn-block {
   width: 100%;
 }
+.sigabeautifier-absolute-right {
+    position: absolute;
+    right: 25px
+}
 .sigabeautifier-pull-right {
   float: right!important;
 }
