@@ -3,6 +3,9 @@ var sigabeautifier = {
 };
 $(function() {
 
+	// send message to background script
+    chrome.runtime.sendMessage({ "newIconPath" : '../img/icon-active.png' });
+
 	$("#TABLE100_MPAGE").attr('cellspacing', 25);
 
 	sigabeautifier.user.nome = $("#span_MPW0039vPRO_PESSOALNOME").text().trim();
