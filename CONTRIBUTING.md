@@ -1,8 +1,9 @@
 ## Como contribuir
 Extensões do Chrome são pequenos programas de software que podem modificar e melhorar a funcionalidade do navegador Chrome. Você as escreve usando tecnologias web, como HTML, JavaScript e CSS.
 ## Primeiros passos
-1. Dê um `Fork` nesse repositório.
+1. Dê um [Fork](https://github.com/pedro-valentim/SIGABeautifier/fork) nesse repositório.
 2. Clone o repositório que foi criado, por exemplo:
+
   `git clone https://github.com/*seu-usuario*/SIGABeautifier.git`
 3. Abra *chrome://extensions* no Chrome (`Menu` > `Mais ferramentas` > `Extensões`)
 4. Habilite o `Modo do desenvolvedor`
