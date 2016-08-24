@@ -11,7 +11,7 @@
     "default_icon": "img/icon128.png",
     "default_title": "SIGABeautifier!"
   },
-  "web_accessible_resources" : ["*.html", "img/*"],
+  "web_accessible_resources" : ["*.html", "img/*", "fonts/*"],
   "permissions": [
     "activeTab",
     "contextMenus"

@@ -34,25 +34,42 @@ $(function() {
 		var sidemenu_sections = [];
 		url = chrome.extension.getURL("html/templates/sidemenu_section.html");
 		$.get(url, function(sidemenu_section_html, textStatus, jqXHR){
+			var id_sufix = 1;
 			// Para cada seção do menu lateral...
-			$("#MPTREEVIEW1Container #ygtvc1 > .ygtvitem").each(function() {
+			$("#MPTREEVIEW1Container #ygtvc1 > .ygtvitem").each(function(i, ygtvitem) {
 				
-				var secao_nome = $('> table .BasicNodeTextDecoration .NodeTextDecoration', $(this)).text();
-				sidemenu_sections.push(
-					object_in_template(sigabeautifier.user, sidemenu_section_html)
-				);
+				var section = {};
+				section.secao_nome = $("> table .BasicNodeTextDecoration .NodeTextDecoration", $(this)).text();
+				section.secao_id = "MenuLateralSecao_" + $("> table .BasicNodeTextDecoration .NodeTextDecoration", $(this)).text() + id_sufix;
+				section.active_class = "";
+				if (id_sufix==1) section.active_class = "active";
+
+				var sidemenu_section = $(object_in_template(section, sidemenu_section_html));
+				var ul = $("<ul id='"+section.secao_id+"''></ul>").addClass("sub-menu collapse");
+
 				// Para cada item na seção no menu
-				$('.ygtvchildren .ygtvitem', $(this)).each(function(){
-					var item_nome = $('> table .BasicNodeTextDecoration .NodeTextDecoration', $(this)).text();
-					var link = $('> table .BasicNodeTextDecoration', $(this));
-					var href = link.attr('href');
-					var target = link.attr('style');
+				$(".ygtvchildren .ygtvitem", $(this)).each(function(){
+					var item_nome = $("> table .BasicNodeTextDecoration .NodeTextDecoration", $(this)).text();
+					var link = $("> table .BasicNodeTextDecoration", $(this));
+					ul.append(
+						$("<li />")
+							.html( $("<a />") )
+							.text(item_nome)
+							.attr("href", link.attr("href"))
+							.attr("target", link.attr("target"))
+					);
 				});
+
+				$("#menu-content", sidemenu).append( sidemenu_section );
+				$("#menu-content", sidemenu).append( ul );
+				id_sufix = id_sufix + 1;
 			});
+			$("#MPTREEVIEW1Container").html(sidemenu);
 		});
-		
-		$("#gxHTMLWrpMPW0039").html(sidemenu);
 	}, "html");
+
+	// Remove borda de table wrapper do menu lateral
+	$("#TABLE2_MPAGE").css('border', 0);
 
 });
 
