@@ -198,7 +198,7 @@
 }
 
 .card.hovercard .cardheader {
-    background: url("http://www.calendariodovestibular.com.br/wp-content/uploads/2013/03/SP_FATEC_FOTO.jpg");
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/geral/sp_fatec_foto.jpg');
     background-size: cover;
     height: 135px;
 }

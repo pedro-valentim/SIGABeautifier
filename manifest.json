@@ -11,7 +11,7 @@
     "default_icon": "img/icon128.png",
     "default_title": "SIGABeautifier!"
   },
-  "web_accessible_resources" : ["*.html"],
+  "web_accessible_resources" : ["*.html", "img/*"],
   "permissions": [
     "activeTab",
     "contextMenus"
@@ -26,6 +26,7 @@
     {
       "matches": ["https://www.sigacentropaulasouza.com.br/aluno/*"],
       "css": [
+        "css/SIGABeautifier_font-awesome.min.css",
         "css/SIGABeautifier.css",
         "css/SIGABeautifier_bootstrap.css"
       ],

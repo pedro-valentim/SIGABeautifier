@@ -1,5 +1,6 @@
 var sigabeautifier = {
-	user: {}
+	user: {},
+	sections: []
 };
 $(function() {
 
@@ -19,10 +20,38 @@ $(function() {
 	sigabeautifier.user.curso = $("#span_vACD_CURSONOME_MPAGE").text().trim();
 	sigabeautifier.user.periodo = $("#span_vACD_PERIODODESCRICAO_MPAGE").text().trim();
 
-	var url = chrome.extension.getURL("html/templates/user-info-card.html");
+	// Atualiza painel de info do user
+	url = chrome.extension.getURL("html/templates/user-info-card.html");
 	$.get(url, function(data, textStatus, jqXHR){
 		var template = object_in_template(sigabeautifier.user, data);
 		$("#gxHTMLWrpMPW0039").html(template);
+	}, "html");
+
+	// Atualiza menu lateral
+	url = chrome.extension.getURL("html/templates/sidemenu.html");
+	$.get(url, function(sidemenu_html, textStatus, jqXHR){
+		var sidemenu = $(sidemenu_html);
+		var sidemenu_sections = [];
+		url = chrome.extension.getURL("html/templates/sidemenu_section.html");
+		$.get(url, function(sidemenu_section_html, textStatus, jqXHR){
+			// Para cada seção do menu lateral...
+			$("#MPTREEVIEW1Container #ygtvc1 > .ygtvitem").each(function() {
+				
+				var secao_nome = $('> table .BasicNodeTextDecoration .NodeTextDecoration', $(this)).text();
+				sidemenu_sections.push(
+					object_in_template(sigabeautifier.user, sidemenu_section_html)
+				);
+				// Para cada item na seção no menu
+				$('.ygtvchildren .ygtvitem', $(this)).each(function(){
+					var item_nome = $('> table .BasicNodeTextDecoration .NodeTextDecoration', $(this)).text();
+					var link = $('> table .BasicNodeTextDecoration', $(this));
+					var href = link.attr('href');
+					var target = link.attr('style');
+				});
+			});
+		});
+		
+		$("#gxHTMLWrpMPW0039").html(sidemenu);
 	}, "html");
 
 });

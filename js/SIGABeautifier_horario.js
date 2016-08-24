@@ -11,6 +11,7 @@ $(function(){
 
 	$('#TEXTBLOCK11 > input').remove();
 
+	// Para cada matéria na tabela de matérias...
 	$('#Grid1ContainerDiv #Grid1ContainerTbl tr[class^=GridClear]').each(function(i, el){
 		var disciplina = $('td:eq(1)', $(this));
 		var parts = disciplina.text().split('<br>');
@@ -19,6 +20,7 @@ $(function(){
 		disciplina.append(parts[0]);
 	});
 
+	// Para cada dia da semana na tabela de horarios/dias...
 	$('#TABLE3 table.GridClear').each(function(i, horario_dia) {
 		var horario_aulas = [];
 
