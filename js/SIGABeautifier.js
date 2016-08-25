@@ -54,6 +54,10 @@ $(function() {
 					var link = $("> table .BasicNodeTextDecoration", $(this));
 
 					var link_element = $("<a />").text(item_nome)
+											.css({
+												width: "100%",
+												display: "inline-block"
+											})
 											.attr("href", link.attr("href"))
 											.attr("target", link.attr("target"));
 
