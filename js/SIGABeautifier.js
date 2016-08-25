@@ -1,6 +1,5 @@
 var sigabeautifier = {
-	user: {},
-	sections: []
+	user: {}
 };
 $(function() {
 
@@ -42,26 +41,29 @@ $(function() {
 				section.secao_nome = $("> table .BasicNodeTextDecoration .NodeTextDecoration", $(this)).text();
 				section.secao_id = "MenuLateralSecao_" + $("> table .BasicNodeTextDecoration .NodeTextDecoration", $(this)).text() + id_sufix;
 				section.active_class = "";
-				if (id_sufix==1) section.active_class = "active";
+				if (section.secao_nome=='Consultas') section.active_class = "active";
 
 				var sidemenu_section = $(object_in_template(section, sidemenu_section_html));
-				var ul = $("<ul id='"+section.secao_id+"''></ul>").addClass("sub-menu collapse");
-
+				sidemenu_section.click(function(){
+					$(this).toggleClass('active');
+				});
+				
 				// Para cada item na seção no menu
 				$(".ygtvchildren .ygtvitem", $(this)).each(function(){
 					var item_nome = $("> table .BasicNodeTextDecoration .NodeTextDecoration", $(this)).text();
 					var link = $("> table .BasicNodeTextDecoration", $(this));
-					ul.append(
+
+					var link_element = $("<a />").text(item_nome)
+											.attr("href", link.attr("href"))
+											.attr("target", link.attr("target"));
+
+					$("ul", sidemenu_section).append(
 						$("<li />")
-							.html( $("<a />") )
-							.text(item_nome)
-							.attr("href", link.attr("href"))
-							.attr("target", link.attr("target"))
+							.html( link_element )
 					);
 				});
 
 				$("#menu-content", sidemenu).append( sidemenu_section );
-				$("#menu-content", sidemenu).append( ul );
 				id_sufix = id_sufix + 1;
 			});
 			$("#MPTREEVIEW1Container").html(sidemenu);

@@ -14,7 +14,8 @@
   "web_accessible_resources" : ["*.html", "img/*", "fonts/*"],
   "permissions": [
     "activeTab",
-    "contextMenus"
+    "contextMenus",
+    "storage"
   ],
   "background": {
     "scripts": [

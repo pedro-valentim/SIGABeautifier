@@ -29,8 +29,8 @@ th.GridClearTitle {
   background-color: WhiteSmoke;
 }
 #TABLE3 tr[class^='GridClear'] > td {
-  padding-top: 4px; 
-  padding-bottom: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 #Grid1ContainerDiv #Grid1ContainerTbl tr.GridClearOdd > td {
   padding: 8px 4px;
