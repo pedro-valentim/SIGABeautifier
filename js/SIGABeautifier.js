@@ -73,6 +73,8 @@ $(function() {
 	// Remove borda de table wrapper do menu lateral
 	$("#TABLE2_MPAGE").css('border', 0);
 
+	$("body").fadeIn("slow");
+
 });
 
 function object_in_template(object, template_html) {

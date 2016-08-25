@@ -3,6 +3,10 @@
 	height: 64px;
 }
 
+body {
+  display: none;
+}
+
 /* Card (http://bootsnipp.com/snippets/featured/profile-card) */
 
 .card {
