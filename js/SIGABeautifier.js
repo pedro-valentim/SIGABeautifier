@@ -9,8 +9,10 @@ $(function() {
 	$("#TABLE100_MPAGE").attr('cellspacing', 25);
 
 	sigabeautifier.user.nome = $("#span_MPW0039vPRO_PESSOALNOME").text().trim();
-	var nome_split = sigabeautifier.user.nome.toLowerCase().split(" ");
-	sigabeautifier.user.nomecurto = nome_split[0].charAt(0).toUpperCase() + nome_split[0].slice(1) + " " + nome_split[1].charAt(0).toUpperCase() + nome_split[1].slice(1);
+	if (sigabeautifier.user.nome!='') {
+		var nome_split = sigabeautifier.user.nome.toLowerCase().split(" ");
+		sigabeautifier.user.nomecurto = nome_split[0].charAt(0).toUpperCase() + nome_split[0].slice(1) + " " + nome_split[1].charAt(0).toUpperCase() + nome_split[1].slice(1);
+	}
 	sigabeautifier.user.avatar = $("#MPW0039FOTO > img").attr('src');
 	sigabeautifier.user.ra = $("#span_MPW0039vACD_ALUNOCURSOREGISTROACADEMICOCURSO").text().trim();
 	sigabeautifier.user.mediacurso = $("#span_MPW0039vACD_ALUNOCURSOINDICEPR").text().trim();
