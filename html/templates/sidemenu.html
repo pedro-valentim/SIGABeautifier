@@ -5,7 +5,9 @@
             <ul id="menu-content" class="menu-content collapse out">
             	{% for section in sections %}
 	            	<li data-toggle="collapse" data-target="#{{section.id}}" class="collapsed {{section.css_class}}">
-					  <a href="#"><i class="fa fa-{{section.fa_icon}} fa-lg"></i> {{section.nome}} <span class="arrow"></span></a>
+					  <a href="{{section.href}}" onclick="{{section.onclick}}" style="width:100%;display: inline-block;">
+					  	<i class="fa fa-{{section.fa_icon}} fa-lg"></i> {{section.nome}}
+					  	<span class="arrow"></span></a>
 					  <ul class="sub-menu collapse" id="{{section.id}}">
 					  	{% for section_item in section.items %}
 					  		<li class="{{section_item.css_class}}">

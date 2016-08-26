@@ -355,6 +355,11 @@ body {
   border-left: 6px solid rgb(90, 139, 181);
   border-bottom: 1px solid rgb(75, 119, 156);
 }
+.nav-side-menu li.danger {
+  background-color: rgb(204, 92, 92);
+  border-left: 6px solid #D83E3E;
+  border-bottom: 1px solid rgb(146, 44, 44);
+}
 .nav-side-menu li a {
   background: inherit!important;
   border: 0!important;
@@ -375,6 +380,10 @@ body {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+.nav-side-menu li.danger:hover {
+  background-color: #D83E3E;
+  border-left: 6px solid rgb(152, 43, 43);
 }
 @media (max-width: 767px) {
   .nav-side-menu {

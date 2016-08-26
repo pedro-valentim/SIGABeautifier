@@ -31,6 +31,8 @@ $(function() {
 			sigabeautifier.user.curso = $("#span_vACD_CURSONOME_MPAGE").text().trim();
 			sigabeautifier.user.periodo = $("#span_vACD_PERIODODESCRICAO_MPAGE").text().trim();
 
+			var logout_btn_onclick = $("#MPW0039IMAGESAIR").attr("onclick");
+
 			// Atualiza info do user (acima do menu lateral)
 			$("#gxHTMLWrpMPW0039").html( nunjucks.render('user-info-card.html', sigabeautifier.user) );
 
@@ -46,6 +48,7 @@ $(function() {
 				section.css_class = "";
 				section.fa_icon = "circle";
 				section.items = [];
+				section.href = "#";
 
 				// Para cada item na seção no menu
 				$(".ygtvchildren .ygtvitem", $(this)).each(function(){
@@ -77,6 +80,15 @@ $(function() {
 			})[0];
 
 			active_section.css_class = "active";
+
+			// Adiciona botão de logout no final do menu
+			sigabeautifier.sections.push({
+				nome: "Sair do SIGA",
+				id: id_prefix + "Logout",
+				css_class: "danger",
+				fa_icon: "times-circle",
+				onclick: logout_btn_onclick
+			});
 
 			var sidemenu = $(nunjucks.render('sidemenu.html', sigabeautifier));
 
