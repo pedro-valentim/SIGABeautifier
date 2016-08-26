@@ -33,6 +33,7 @@
       ],
       "js": [
         "js/jquery.js",
+        "js/nunjucks.min.js",
         "js/SIGABeautifier.js"
       ]
     },

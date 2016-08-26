@@ -1,8 +1,20 @@
 <div class="nav-side-menu">
     <div class="brand"></div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-  
         <div class="menu-list">
-            <ul id="menu-content" class="menu-content collapse out"></ul>
+            <ul id="menu-content" class="menu-content collapse out">
+            	{% for section in sections %}
+	            	<li data-toggle="collapse" data-target="#{{section.id}}" class="collapsed {{section.css_class}}">
+					  <a href="#"><i class="fa fa-{{section.fa_icon}} fa-lg"></i> {{section.nome}} <span class="arrow"></span></a>
+					  <ul class="sub-menu collapse" id="{{section.id}}">
+					  	{% for section_item in section.items %}
+					  		<li class="{{section_item.css_class}}">
+					  			<a href="{{ section_item.href }}" target="{{ section_item.target }}" style="width:100%;display: inline-block;">{{section_item.nome}}</a>
+					  		</li>
+					  	{% endfor %}
+					  </ul>
+					</li>
+				{% endfor %}
+            </ul>
      </div>
 </div>
