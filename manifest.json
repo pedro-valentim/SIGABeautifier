@@ -46,6 +46,13 @@
       "js": [
         "js/SIGABeautifier_horario.js"
       ]
+    },
+    {
+      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/home.aspx"],
+      "css": [],
+      "js": [
+        "js/SIGABeautifier_home.js"
+      ]
     }
   ]
 }

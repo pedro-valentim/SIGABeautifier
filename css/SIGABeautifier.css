@@ -6,6 +6,10 @@
 body {
   display: none;
 }
+.sigabeautifier-container {
+  font-family: Helvetica;
+  font-weight: 100;
+}
 
 /* Card (http://bootsnipp.com/snippets/featured/profile-card) */
 

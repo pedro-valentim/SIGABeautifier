@@ -1,0 +1,39 @@
+<div class="sigabeautifier-container" style="margin-top: 15px;">
+	<span>Curso: </span><b>{{ user.curso }}</b>
+	<div class="sigabeautifier-progress" style="margin-top: 8px;">
+	  <div class="sigabeautifier-progress-bar sigabeautifier-progress-bar-primary" style="width: {{ prazos.integralizacao_min }}%">
+	    <span class="sr-only">Integralização mínima: {{ prazos.integralizacao_min_num }} semestres</span>
+	  </div>
+	  <div class="sigabeautifier-progress-bar sigabeautifier-progress-bar-danger" style="width: {{ prazos.integralizacao_max }}%">
+	    <span class="sr-only">Integralização máxima: {{ prazos.integralizacao_max_num }} semestres</span>
+	  </div>
+	</div><br>
+	<span>Situação: </span><b>{{ prazos.situacao }}</b>
+	<div class="sigabeautifier-progress" style="margin-top: 8px;">
+	  <div class="sigabeautifier-progress-bar sigabeautifier-progress-bar-success" style="width: {{ prazos.semestres_cursados }}%">
+	    <span class="sr-only">
+	    	{% if not prazos.concluido %}
+	    		Semestres Cursados: {{ prazos.semestres_cursados_num }}
+	    	{% else %}
+	    		{{ prazos.concluido_mensagem | safe }}
+	    	{% endif %}
+	    	<span style="opacity: 0.5;">
+	    	{% if prazos.integralizacao_extra_num > 1 %}
+	    		({{ prazos.integralizacao_extra_num }} semestres a mais que o mínimo)
+	    	{% elif prazos.integralizacao_extra_num == 1 %}
+	    		({{ prazos.integralizacao_extra_num }} semestre a mais que o mínimo)
+	    	{% endif %}
+	    	</span>
+	    </span>
+	  </div>
+	  <div class="sigabeautifier-progress-bar sigabeautifier-progress-bar-{{ prazos.nao_cursado_css_class | default('default') }}" style="width: {{ prazos.semestres_nao_cursados }}%">
+	    <span class="sr-only">
+	    	{% if prazos.semestres_nao_cursados_num > 1 %}
+	    		Restam: {{ prazos.semestres_nao_cursados_num }}
+	    	{% elif prazos.semestres_nao_cursados_num == 1 %}
+	    		Resta 1!<br><sup>semestre</sup>
+	    	{% endif %}
+	    </span>
+	  </div>
+	</div>
+</div>

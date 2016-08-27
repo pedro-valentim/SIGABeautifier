@@ -9,14 +9,20 @@ SIGA Beautifier é uma extensão do Chrome para melhorar a visualização do [SI
 
 ## Tela
 
-![Tela de Horário](https://github.com/pedro-valentim/SIGABeautifier/blob/master/example/example-horario.png "GRADE HORÁRIA DO CURSO")
+![Tela de Avisos (Inicial)](https://github.com/pedro-valentim/SIGABeautifier/blob/master/example/example-home.png "AVISOS")
+
+![Tela de Horários](https://github.com/pedro-valentim/SIGABeautifier/blob/master/example/example-horario.png "GRADE HORÁRIA DO CURSO")
 
 ## Features
+- Geral (/aluno/*.aspx)
+    * Melhora menu lateral;
+    * Melhora área de informações do aluno.
+- [AVISOS (/aluno/home.aspx)](https://www.sigacentropaulasouza.com.br/aluno/home.aspx)
+    * Mostra prazos de integralização em barras de progresso;
 - [GRADE HORÁRIA DO CURSO (/aluno/horario.aspx)](https://www.sigacentropaulasouza.com.br/aluno/horario.aspx)
     * Reordena as matérias por horário;
     * Clique na matéria seleciona os horários nas tabelas de horário/dia;
-    * Adiciona label (Twitter Bootstrap) para hrs/aula.
-    * Estilização específica para impressão da tela
+    * Estilização específica para impressão da tela.
 
 ## TO-DO
 - [Geral (/aluno/home.aspx)](https://www.sigacentropaulasouza.com.br/aluno/home.aspx)
