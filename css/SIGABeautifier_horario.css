@@ -15,22 +15,23 @@ tr[class^='GridClear'].sigabeautifier-active>td>span.ReadonlyAttribute {
 th.GridClearTitle {
   font-family: Helvetica;
   font-weight: 100;
+  text-align:left;
 }
 #TABLE3 {
   width: 50%;
 }
 
-#TABLE3 tr[class^='GridClear'] {
+#TABLE3 tr.GridClear {
   white-space: nowrap;
   font-size: 11.5pt;
   background-color: #FAFAFA;
   text-align: center;
   text-indent: 5px;
 }
-#TABLE3 tr[class^='GridClear']:nth-child(even) {
+#TABLE3 tr.GridClear:nth-child(even) {
   background-color: WhiteSmoke;
 }
-#TABLE3 tr[class^='GridClear'] > td {
+#TABLE3 tr.GridClear > td {
   padding-top: 8px;
   padding-bottom: 8px;
 }

@@ -1,0 +1,25 @@
+<table id="Grid1ContainerTbl" class="GridClear">
+	<thead>
+		<tr>
+			<th nowrap="nowrap" class="GridClearTitle">Sigla</th>
+			<th nowrap="nowrap" class="GridClearTitle">Disciplina</th>
+			<th nowrap="nowrap" class="GridClearTitle"></th>
+			<th nowrap="nowrap" class="GridClearTitle">Turma</th>
+			<th nowrap="nowrap" class="GridClearTitle">Professor</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% set cls = cycler("Odd", "Even") %}
+		{% for disciplina in disciplinas %}
+			<tr class="GridClearOdd">
+				<td style="opacity: 0.6;">{{ disciplina.sigla }}</td>
+				<td style="text-align: left;">{{ disciplina.nome }}</td>
+				<td>
+					<label class="sigabeautifier-label sigabeautifier-label-primary">{{ disciplina.horas_aula }}</label>
+				</td>
+				<td style="opacity: 0.9;">{{ disciplina.turma }}</td>
+				<td style="opacity: 0.9;">{{ disciplina.professor }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>

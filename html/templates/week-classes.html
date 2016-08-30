@@ -1,0 +1,21 @@
+<div style="width: 50%;">
+	{% for dia in dias %}
+	<div style="width: 16.66666%;">
+		<h4>{{ dia.nome }}</h4>
+		<table>
+			<tr>
+				<th>Horário</th>
+				<th>Disciplina</th>
+				<th>Turma</td>
+			</tr>
+			{% for horario in dia.horarios %}
+				<tr>
+					<td>horario.horario</td>
+					<td>horario.displina</td>
+					<td>horario.turma</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+	{% endfor %}
+</div>
