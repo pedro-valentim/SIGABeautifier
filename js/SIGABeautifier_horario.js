@@ -43,7 +43,8 @@ $(function(){
 	$("#TABLE3 table.GridClear").each(function(i, horario_dia) {
 		var dia = {
 			nome: dias_semana[i],
-			horarios: []
+			horarios: [],
+			is_today: i == (new Date().getDay() - 1)
 		};
 
 		// Para cada aula/horário do dia
@@ -97,6 +98,8 @@ $(function(){
 
 		// Se o item já não estava selecionado
 		if (not_reselecting) {
+
+			window.console.log( $(this) );
 
 			// Adiciona classe que inverte cor de fundo do label da linha selecionada
 			$("span.sigabeautifier-label", $(this)).addClass("sigabeautifier-label-reverse");
