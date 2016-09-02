@@ -15,10 +15,12 @@
 					</thead>
 					<tbody>
 						{% for horario in dia.horarios %}
-							<tr class="GridClear">
+							<tr data-horario-sigla="{{ horario.disciplina.sigla }}" class="GridClear">
 								<td>{{ horario.inicio_raw }} até {{ horario.final_raw }}</td>
 								<td>
-									<span title="{{ horario.disciplina.nome }} com {{ horario.disciplina.professor }}">{{ horario.disciplina.sigla }}</span>
+									<span title="{{ horario.disciplina.nome }} com {{ horario.disciplina.professor }}">
+										{{ horario.disciplina.sigla }}
+									</span>
 								</td>
 							</tr>
 						{% endfor %}

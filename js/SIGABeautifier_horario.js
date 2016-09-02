@@ -15,7 +15,8 @@ $(function(){
 
 	// Para cada matéria na tabela de matérias...
 	$("#Grid1ContainerDiv #Grid1ContainerTbl tr[class^=GridClear]").each(function(i, el){
-		var nome_horasaula = $("td:eq(1)", $(this)).text().split("<br>");
+		var nome_horasaula = $("td:eq(1)", $(this)).text().split(" - ");
+
 		sigabeautifier.disciplinas.push({
 			sigla: $("td:eq(0)", $(this)).text(),
 			nome: nome_horasaula[0],
@@ -24,7 +25,6 @@ $(function(){
 			professor: $("td:eq(3)", $(this)).text()
 		});
 	});
-
 
 	var dias_semana = [
 		'Segunda-feira',
@@ -68,8 +68,8 @@ $(function(){
 
 		// Ordena os todos os horários do dia pelo horário de cada aula
 		dia.horarios.sort(function(current, next){
-			if(current.inicial < next.inicial) return -1;
-		    if(current.inicial > next.inicial) return 1;
+			if(current.inicio < next.inicio) return -1;
+		    if(current.inicio > next.inicio) return 1;
 		    return 0;
 		});
 
@@ -91,7 +91,7 @@ $(function(){
 		$("#Grid1ContainerDiv #Grid1ContainerTbl tr.sigabeautifier-active").removeClass("sigabeautifier-active");
 
 		// Remove classe que inverte cor de fundo do label
-		$("#Grid1ContainerDiv #Grid1ContainerTbl span.sigabeautifier-label-reverse").removeClass("sigabeautifier-label-reverse");
+		$("#Grid1ContainerDiv #Grid1ContainerTbl label.sigabeautifier-label-reverse").removeClass("sigabeautifier-label-reverse");
 
 		// Remove classe que destaca linhas das tabelas de horário
 		$("#TABLE3 tr.GridClear").removeClass("sigabeautifier-active");
@@ -99,20 +99,15 @@ $(function(){
 		// Se o item já não estava selecionado
 		if (not_reselecting) {
 
-			window.console.log( $(this) );
-
 			// Adiciona classe que inverte cor de fundo do label da linha selecionada
-			$("span.sigabeautifier-label", $(this)).addClass("sigabeautifier-label-reverse");
+			$("label.sigabeautifier-label", $(this)).addClass("sigabeautifier-label-reverse");
 			
 			// Adiciona classe que destaca linha selecionada
 			$(this).addClass("sigabeautifier-active");
 
 			var sigla = $("td:eq(0)", $(this)).text();
 
-			$("#TABLE3 tr.GridClear .sigabeautifier-horario").each(function(i, element) {
-				// Destaca linhas das tabelas de horário que forem da mesma disciplina clicada
-				if ($(element).text() == sigla) $(element).parents("tr.GridClear").addClass("sigabeautifier-active");
-			});
+			$("#TABLE3 tr.GridClear[data-horario-sigla='"+sigla+"']").addClass("sigabeautifier-active");
 
 		}
 
