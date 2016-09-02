@@ -1,0 +1,33 @@
+<table class="GridClear">
+<tr>
+	{% for dia in dias %}
+		{% if dia.horarios.length > 0 %}
+			<td style="vertical-align: top;{% if dia.is_today %}box-shadow: 1px 1px 5px 0px #CCC;background-color: rgba(226, 226, 226, 0.14);{% endif %}">
+				<table id="TABLE3" class="GridClear" style="display: inline-block;">
+					<thead>
+						<tr>
+							<th colspan="3" style="font-size: 10pt;">{{ dia.nome }}</th>
+						</tr>
+						<tr>
+							<th class="GridClearTitle">Horário</th>
+							<th class="GridClearTitle">Disciplina</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for horario in dia.horarios %}
+							<tr data-horario-sigla="{{ horario.disciplina.sigla }}" class="GridClear">
+								<td>{{ horario.inicio_raw }} até {{ horario.final_raw }}</td>
+								<td>
+									<span title="{{ horario.disciplina.nome }} com {{ horario.disciplina.professor }}">
+										{{ horario.disciplina.sigla }}
+									</span>
+								</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</td>
+		{% endif %}
+	{% endfor %}
+</tr>
+</table>
