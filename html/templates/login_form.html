@@ -1,0 +1,30 @@
+<div class="container" style="margin-top: 8%;">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Acesso ao SIGA</h3>
+                </div>
+                <div class="panel-body">
+                    <!-- <form accept-charset="UTF-8" role="form" onsubmit="javascript:return false;"> -->
+                        <fieldset>
+                            <div class="form-group">
+                                {{ fake_user_field|safe }}
+                            </div>
+                            <div class="form-group">
+                                {{ fake_password_field|safe }}
+                            </div>
+                            <div style="text-align: center;">{{ fake_gxErrorViewer|safe }}</div><br>
+                            {{ fake_submit_btn|safe }}
+                            <div style="text-align: center;margin-top: 6px;">{{ help_text|safe }}</div>
+                        </fieldset>
+                    <!-- </form> -->
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            {{ message|safe }}
+        </div>
+    </div>
+</div>

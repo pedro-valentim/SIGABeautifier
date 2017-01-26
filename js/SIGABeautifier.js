@@ -7,7 +7,7 @@ $(function() {
 	// send message to background script
     chrome.runtime.sendMessage({ "newIconPath" : '../img/icon-active.png' });
 
-    sigabeautifier.user.autenticado = $("#span_MPW0039vPRO_PESSOALNOME") != null;
+    sigabeautifier.user.autenticado = $("#span_MPW0039vPRO_PESSOALNOME").length > 0;
 
     nunjucks.configure(chrome.extension.getURL("html/templates"), { autoescape: true });
 
