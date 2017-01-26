@@ -9,6 +9,8 @@ SIGA Beautifier é uma extensão do Chrome para melhorar a visualização do [SI
 
 ## Tela
 
+![Tela de Login](https://github.com/pedro-valentim/SIGABeautifier/blob/master/example/login.gif "LOGIN")
+
 ![Tela de Avisos (Inicial)](https://github.com/pedro-valentim/SIGABeautifier/blob/master/example/example-home.png "AVISOS")
 
 ![Tela de Horários](https://github.com/pedro-valentim/SIGABeautifier/blob/master/example/example-horario.png "GRADE HORÁRIA DO CURSO")
@@ -17,6 +19,8 @@ SIGA Beautifier é uma extensão do Chrome para melhorar a visualização do [SI
 - Geral (/aluno/*.aspx)
     * Melhora menu lateral;
     * Melhora área de informações do aluno.
+- Login (/aluno/login.aspx)
+    * Melhora disposição/aparência de elementos.
 - [AVISOS (/aluno/home.aspx)](https://www.sigacentropaulasouza.com.br/aluno/home.aspx)
     * Mostra prazos de integralização em barras de progresso;
 - [GRADE HORÁRIA DO CURSO (/aluno/horario.aspx)](https://www.sigacentropaulasouza.com.br/aluno/horario.aspx)
