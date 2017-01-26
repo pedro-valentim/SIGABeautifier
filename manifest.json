@@ -38,7 +38,7 @@
       ]
     },
     {
-      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/horario.aspx"],
+      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/horario.aspx*"],
       "css": [
         "css/SIGABeautifier_horario.css",
         "css/SIGABeautifier_horario_print.css"
@@ -48,10 +48,21 @@
       ]
     },
     {
-      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/home.aspx"],
+      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/home.aspx*"],
       "css": [],
       "js": [
         "js/SIGABeautifier_home.js"
+      ]
+    },
+    {
+      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/login.aspx*"],
+      "css": [
+        "css/SIGABeautifier_login.css",
+        "css/bootstrap-theme.min.css",
+        "css/bootstrap.min.css"
+      ],
+      "js": [
+        "js/SIGABeautifier_login.js"
       ]
     }
   ]
