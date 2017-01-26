@@ -1,27 +1,34 @@
-/*------------------------------------------------------------------
-[Master Stylesheet]
+html, body {
+	height: 100%;
+}
+html {
+	background: #efefef;
+	margin: 0px;
+	padding: 20px;
+}
 
-Project    	: Aether
-Version		: 1.0
-Last change	: 2015/03/27
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-[Table of contents]
+#MAINFORM {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
 
-1. General Structure
-2. Anchor Link
-3. Text Outside the Box
-4. Main Form
-5. Login Button
-6. Form Invalid
-7. Form - Main Message
-8. Custom Checkbox & Radio
-9. Misc
--------------------------------------------------------------------*/
-/*=== 1. General Structure ===*/
-html,
 body {
-  background: #efefef;
-  padding: 10px;
-  border: 1px solid #ccc;
+	width: 100%;
+	background: #ffffff;
+	border: 1px solid #effeff;
+	box-shadow: #ddd 5px 5px 20px;
+}
+
+.ErrorViewer {
+	display: block !important;
+	font-family: inherit !important;
+	font-size: 8.7pt !important;
+	font-weight: 500 !important;
+}
+
+.ErrorViewerBullet div {
+	display: inherit !important;
+    text-align: center !important;
+    margin: 0 !important;
 }
