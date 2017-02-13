@@ -31,7 +31,7 @@ $(function(){
 		submit_btn: $('input[type="button"][name="BTCONFIRMA"]:first'),
 		gxErrorViewer: $('#gxErrorViewer'),
 		help_text: $('#TEXTBLOCK7')[0].outerHTML,
-		message: $('#TEXTBLOCK3 > div:first')[0].outerHTML,
+		/*message: $('#TEXTBLOCK3 > div:first')[0].outerHTML,*/
 	};
 
 	
@@ -39,7 +39,7 @@ $(function(){
 
 	context = {
 		help_text: els.help_text,
-		message: els.message,
+		/*message: els.message,*/
 		gxErrorViewer: els.gxErrorViewer,
 		fake_user_field: $(els.user_field[0].outerHTML).attr({
 			'id': 'fake_user_field',
