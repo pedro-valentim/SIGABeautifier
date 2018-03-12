@@ -206,7 +206,7 @@ body {
 }
 
 .card.hovercard .cardheader {
-    background-image: url('chrome-extension://__MSG_@@extension_id__/img/geral/sp_fatec_foto.jpg');
+    background-image: url('chrome-extension://__MSG_@@extension_id__/img/geral/fatec-sjc.jpg');
     background-size: cover;
     height: 135px;
 }
