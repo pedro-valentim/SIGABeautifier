@@ -25,7 +25,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/*"],
+      "matches": ["https://siga.cps.sp.gov.br/aluno/*"],
       "css": [
         "css/SIGABeautifier_font-awesome.min.css",
         "css/SIGABeautifier.css",
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/horario.aspx*"],
+      "matches": ["https://siga.cps.sp.gov.br/aluno/horario.aspx*"],
       "css": [
         "css/SIGABeautifier_horario.css",
         "css/SIGABeautifier_horario_print.css"
@@ -48,14 +48,14 @@
       ]
     },
     {
-      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/home.aspx*"],
+      "matches": ["https://siga.cps.sp.gov.br/aluno/home.aspx*"],
       "css": [],
       "js": [
         "js/SIGABeautifier_home.js"
       ]
     },
     {
-      "matches": ["https://www.sigacentropaulasouza.com.br/aluno/login.aspx*"],
+      "matches": ["https://siga.cps.sp.gov.br/aluno/login.aspx*"],
       "css": [
         "css/SIGABeautifier_login.css",
         "css/bootstrap-theme.min.css",
