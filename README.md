@@ -1,5 +1,5 @@
 # SIGABeautifier
-SIGA Beautifier é uma extensão do Chrome para melhorar a visualização do [SIGA - Centro Paula Souza](https://www.sigacentropaulasouza.com.br/aluno)
+SIGA Beautifier é uma extensão do Chrome para melhorar a visualização do [SIGA - Centro Paula Souza](https://siga.cps.sp.gov.br/aluno/login.aspx)
 ## Passo a passo para instalação da extensão
 
 1. Faça [download](https://goo.gl/Akprso) do arquivo de extensão.
@@ -21,13 +21,13 @@ SIGA Beautifier é uma extensão do Chrome para melhorar a visualização do [SI
     * Melhora área de informações do aluno.
 - Login (/aluno/login.aspx)
     * Melhora disposição/aparência de elementos.
-- [AVISOS (/aluno/home.aspx)](https://www.sigacentropaulasouza.com.br/aluno/home.aspx)
+- [AVISOS (/aluno/home.aspx)](https://siga.cps.sp.gov.br/aluno/home.aspx)
     * Mostra prazos de integralização em barras de progresso;
-- [GRADE HORÁRIA DO CURSO (/aluno/horario.aspx)](https://www.sigacentropaulasouza.com.br/aluno/horario.aspx)
+- [GRADE HORÁRIA DO CURSO (/aluno/horario.aspx)](https://siga.cps.sp.gov.br/aluno/horario.aspx)
     * Reordena as matérias por horário;
     * Clique na matéria seleciona os horários nas tabelas de horário/dia;
     * Estilização específica para impressão da tela.
 
 ## TO-DO
-- [Geral (/aluno/home.aspx)](https://www.sigacentropaulasouza.com.br/aluno/home.aspx)
+- [Geral (/aluno/home.aspx)](https://siga.cps.sp.gov.br/aluno/home.aspx)
     *  Melhorar menu principal
