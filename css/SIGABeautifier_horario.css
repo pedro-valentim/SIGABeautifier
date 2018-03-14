@@ -17,6 +17,9 @@ th.GridClearTitle {
   font-weight: 100;
   text-align:left;
 }
+th.GridClearTitle.centered {
+  text-align: center;
+}
 #TABLE3 {
   width: 50%;
 }
