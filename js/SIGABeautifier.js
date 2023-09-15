@@ -7,7 +7,7 @@ $(function() {
 	// send message to background script
     chrome.runtime.sendMessage({ "newIconPath" : '../img/icon-active.png' });
 
-    sigabeautifier.user.autenticado = $("#span_MPW0039vPRO_PESSOALNOME").length > 0;
+    sigabeautifier.user.autenticado = $("#span_MPW0041vPRO_PESSOALNOME").length > 0;
 
     nunjucks.configure(chrome.extension.getURL("html/templates"), { autoescape: true });
 
@@ -18,23 +18,26 @@ $(function() {
 
     	if (sigabeautifier.user.autenticado) {
 
-    		sigabeautifier.user.nome = $("#span_MPW0039vPRO_PESSOALNOME").text().trim();
+			console.log('teste');
+
+    		sigabeautifier.user.nome = $("#span_MPW0041vPRO_PESSOALNOME").text().trim();
 
 			nome_split = sigabeautifier.user.nome.toLowerCase().split(" ");
 
 			sigabeautifier.user.nomecurto = nome_split[0].charAt(0).toUpperCase() + nome_split[0].slice(1) + " " + nome_split[1].charAt(0).toUpperCase() + nome_split[1].slice(1);
-			sigabeautifier.user.avatar = $("#MPW0039FOTO > img").attr('src');
-			sigabeautifier.user.ra = $("#span_MPW0039vACD_ALUNOCURSOREGISTROACADEMICOCURSO").text().trim();
-			sigabeautifier.user.mediacurso = $("#span_MPW0039vACD_ALUNOCURSOINDICEPR").text().trim();
-			sigabeautifier.user.progressao = $("#span_MPW0039vACD_ALUNOCURSOINDICEPP").text().trim();
-			sigabeautifier.user.maiormediacurso = $("#span_MPW0039vMAX_ACD_ALUNOCURSOINDICEPR").text().trim();
+			sigabeautifier.user.avatar = $("#MPW0041FOTO > img").attr('src');
+			sigabeautifier.user.ra = $("#span_MPW0041vACD_ALUNOCURSOREGISTROACADEMICOCURSO").text().trim();
+			sigabeautifier.user.mediacurso = $("#span_MPW0041vACD_ALUNOCURSOINDICEPR").text().trim();
+			sigabeautifier.user.progressao = $("#span_MPW0041vACD_ALUNOCURSOINDICEPP").text().trim();
+			sigabeautifier.user.maiormediacurso = $("#span_MPW0041vMAX_ACD_ALUNOCURSOINDICEPR").text().trim();
 			sigabeautifier.user.curso = $("#span_vACD_CURSONOME_MPAGE").text().trim();
 			sigabeautifier.user.periodo = $("#span_vACD_PERIODODESCRICAO_MPAGE").text().trim();
 
-			var logout_btn_onclick = $("#MPW0039IMAGESAIR").attr("onclick");
+			var logout_btn_onclick = $("#MPW0041IMAGESAIR").attr("onclick");
 
 			// Atualiza info do user (acima do menu lateral)
-			$("#gxHTMLWrpMPW0039").html( nunjucks.render('user-info-card.html', sigabeautifier.user) );
+			$("#gxHTMLWrpMPW0041").html( nunjucks.render('user-info-card.html', sigabeautifier.user) );
+			console.log($("#gxHTMLWrpMPW0041"));
 
 			var id_prefix = "MenuLateralSecao_";
 
